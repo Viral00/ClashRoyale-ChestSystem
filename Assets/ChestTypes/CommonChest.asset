@@ -18,3 +18,4 @@ MonoBehaviour:
   GemsMin: 10
   GemsMax: 20
   TimeInSeconds: 900
+  ChestImage: {fileID: 21300000, guid: ebb67ea63912f034089e0f00f75c4750, type: 3}

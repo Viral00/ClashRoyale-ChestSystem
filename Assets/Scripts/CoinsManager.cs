@@ -4,10 +4,31 @@ using UnityEngine;
 
 public class CoinsManager : MonoBehaviour
 {
-    public ChestScriptable ChestScriptableObj;
+    [SerializeField]private ChestScriptable CommonChestObj;
+    [SerializeField] private ChestScriptable RareChestObj;
+    [SerializeField] private ChestScriptable EpicChestObj;
+    [SerializeField] private ChestScriptable LegendaryChestObj;
 
-    private void ChestCoins()
+    private List<ChestScriptable> ChestObj = new List<ChestScriptable>();
+
+    private void Awake()
     {
-        int Coins = Random.Range(ChestScriptableObj.CoinsMin, ChestScriptableObj.CoinsMax);
+        ChestObj.Add(CommonChestObj);
+        ChestObj.Add(RareChestObj);
+        ChestObj.Add(EpicChestObj);
+        ChestObj.Add(LegendaryChestObj);
     }
+
+    private void CreateChest()
+    {
+
+    }
+
+
+    private void ChestOpen()
+    {
+        int Coins = Random.Range(CommonChestObj.CoinsMin, CommonChestObj.CoinsMax);
+        int Gems = Random.Range(CommonChestObj.GemsMin, CommonChestObj.GemsMax);
+    }
+
 }

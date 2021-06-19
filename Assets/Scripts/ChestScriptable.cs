@@ -9,4 +9,5 @@ public class ChestScriptable : ScriptableObject
     public int GemsMin;
     public int GemsMax;
     public int TimeInSeconds;
+    public Sprite ChestImage;
 }
